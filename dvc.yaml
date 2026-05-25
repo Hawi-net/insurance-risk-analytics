@@ -1,1 +1,7 @@
-c
+stages:
+  eda:
+    cmd: jupyter nbconvert --to notebook --execute notebooks/01_eda.ipynb --inplace
+    deps:
+      - data/insurance_data.csv
+      - notebooks/01_eda.ipynb
+      - src/eda_utils.py
